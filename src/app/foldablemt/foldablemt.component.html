@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script> 
+      $(document).ready(function() {
+
+$('.color-choose input').on('click', function() {
+    var color = $(this).attr('data-image');
+
+    $('.active').removeClass('active');
+    $('.left-column img[data-image = ' + color + ']').addClass('active');
+    $(this).addClass('active');
+});
+
+});
+
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1sr product</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <!-- CSS -->
+ 
+    <meta name="robots" content="noindex,follow" />
+
+  </head>
+
+  <body>
+    <app-navbar1>
+    <br>
+    </app-navbar1>
+    <app-navbar2></app-navbar2>
+    <br>
+    <br>
+    <main class="container">
+
+      <!-- Left Column / Color Image -->
+      <div class="left-column">
+        <img data-image="white" src="../../assets/images_kines/images_table/white.png" alt="1">
+        <img data-image="red" src="../../assets/images_kines/images_table/red.png" alt="2">
+        <img data-image="black"  class="active" src="../../assets/images_kines/images_table/black.png" alt="3">
+      </div>
+
+
+      <!-- Right Column -->
+      <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+          <h1>Portable Massage Table
+</h1>
+          <p>This new Massage Table Package is the best selling model and is ideal for quality minded massage enthusiasts. This comfortable, strong and stable massage table features the Auto-Lock™ leg opening system, an Adjustable Face Cradle, Contoured Arm Rest Shelf, and a Carrying Case. The Roma portable massage table is great looking and feels great; yet is “Strong As A Truck”! Makes a great gift for you and your partner.</p>
+        </div>
+
+        <!-- Product Configuration -->
+        <div class="product-configuration">
+
+          <!-- Product Color -->
+          <div class="product-color">
+            <span>Color</span>
+
+            <div class="color-choose">
+              <div>
+                <input data-image="black" type="radio" id="black" name="color" value="black" >
+                <label for="black"><span></span></label>
+              </div>
+              <div>
+                <input data-image="red" type="radio" id="red" name="color" value="red">
+                <label for="red"><span></span></label>
+              </div>
+              <div>
+                <input data-image="white" type="radio" id="white" name="color" value="white">
+                <label for="white"><span></span></label>
+              </div>
+            </div>
+
+          </div>
+          <div class="cable-config">
+            <span>Contact Information</span>
+
+            <div class="cable-choose">
+              <pre> Location :    Ain Zaghouen , Tunis</pre>
+              <pre> Shop :   Produits de beauté</pre>
+              
+            </div> 
+            </div>
+
+          
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <span>900 DT</span>
+          <a href="#" class="cart-btn">Add to cart</a>
+        </div>
+     </div>
+    </div>  
+
+    </main>
+    <app-footer></app-footer>
+
+    <!-- Scripts -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="../../assets/js/script.js" charset="utf-8"></script>
+  </body>
+</html>

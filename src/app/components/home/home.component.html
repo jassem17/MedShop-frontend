@@ -1,0 +1,88 @@
+
+<app-navbar1></app-navbar1> 
+<br> 
+
+
+<app-navbar2></app-navbar2>
+  <br>
+  
+  <!--Begin Of Human Body search-->
+  
+  <app-skeleton></app-skeleton>
+  
+  <!--End Of Human Body Search-->
+  
+  
+  <!-- Slideshow container -->
+  
+  <div class="property">
+    <section class="slideshow" style="height: 420px;">
+      <span id="target-1"></span>
+      <span id="target-2"></span>
+      <span id="target-3"></span>
+      <span id="target-4"></span>
+  
+      <div class="slideshow-item item-1">
+        <div class="progress"></div>
+        <img src="../assets/images/products/1.jpg" alt="" />
+        <a href="#target-4" class="arrow arrow-prev"></a>
+        <a href="#target-2" class="arrow arrow-next"></a>
+      </div>
+      <div class="slideshow-item item-2">
+        <div class="progress"></div>
+        <img src="../assets/images/products/2.jpg" alt="" />
+        <a href="#target-1" class="arrow arrow-prev"></a>
+        <a href="#target-3" class="arrow arrow-next"></a>
+      </div>
+      <div class="slideshow-item item-3">
+        <div class="progress"></div>
+        <img src="../assets/images/products/3.jpg" alt="" />
+        <a href="#target-2" class="arrow arrow-prev"></a>
+        <a href="#target-4" class="arrow arrow-next"></a>
+      </div>
+      <div class="slideshow-item item-4">
+        <div class="progress"></div>
+        <img src="../assets/images/products/4.jpg" alt="" />
+        <a href="#target-3" class="arrow arrow-prev"></a>
+        <a href="#target-1" class="arrow arrow-next"></a>
+      </div>
+    </section>
+  </div>
+  
+  <!--End Of SlideShow-->
+  
+  
+  <div class="app">
+    <div class="container mb-5 mt-5">
+      <h1 class="text-center mt-4 mb-4">Latest Product</h1>
+  
+      <div class="row">
+        <div *ngFor="let temp of products" class="col-md-4">
+  
+          <div class="card mt-3" >
+            <div class="product-1 align-items-center p-2 text-center">
+              <div class="image-container" >
+                 <img class="xyz rounded" src="{{temp.imageUrl}}" width="200"  >
+                <img class="xyz-replacement rounded" src="{{temp.imageShadow}}" width="200" height="auto" >
+              </div>
+              <h5>{{temp.nom}}</h5>
+              
+              <div class=" cost mt-3 text-dark"> <span>{{temp.prix | currency: 'DT'}} </span>
+                <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                    class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+              </div>
+            </div>
+            <div class="p-3 bg-danger text-center text-white mt-3 cursor cart"> <a href="#" type="button" style="text-decoration: none; color: aliceblue;"><span class="text-uppercase cart-text">Add
+                to cart</span> </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section >
+    <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/9aa5e2e1-d3a5-4c73-a4d9-4971677f907f"></iframe>
+
+  </section>
+
+ <app-footer></app-footer>
