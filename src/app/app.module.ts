@@ -26,8 +26,9 @@ import { HairComponent } from './hair/hair.component';
 import { SkeletonComponent } from './skeleton/skeleton.component';
 import { SearchComponent } from './components/search/search.component';
 import { CardStatusComponent } from './components/card-status/card-status.component';
+import { AppRoutingModule } from './app-routing.module';
 
-const appRoutes: Routes =[
+/*const appRoutes: Routes =[
   {path: 'product-list' ,component: ProductListComponent},
   {path:'soins-pansement',component:SoinsPansementsComponent},
   {path:'cardiologue',component:CardiologueComponent},
@@ -44,7 +45,7 @@ const appRoutes: Routes =[
   {path: '', component:HomeComponent },
   {path: 'hair', component:HairComponent }
 
-]
+]*/
 
 @NgModule({
   declarations: [
@@ -75,8 +76,8 @@ const appRoutes: Routes =[
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
-    //AppRoutingModule,
+    //RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
     

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CartOrder } from 'src/app/common/cart-order';
 import { Product } from 'src/app/common/product';
+import { CartServiceService } from 'src/app/services/cart-service.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -13,7 +15,8 @@ export class HomeComponent implements OnInit {
   currency: String = '';
   products: Product[]=[];
   constructor(private productService: ProductService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private cartService : CartServiceService) { }
 
   ngOnInit() {
 
@@ -54,4 +57,13 @@ export class HomeComponent implements OnInit {
       }
     )
   }
+  addToCart(temp:Product){
+    const cartorder = new CartOrder(temp);
+    this.cartService.addOrderToCart(cartorder);
+  }
+  
 }
+
+
+
+

@@ -1,0 +1,25 @@
+.statusCard
+{
+  color: rgb(15, 14, 14);
+  border: 1px solid white;
+  border-radius: 15px 15px 15px 15px;
+  cursor: pointer;
+  transition: all 1s;
+  margin-top: 5px;
+  
+}
+.statusCard i {
+  font-size: 30px;
+  margin: 12px 10px 10px 19px;
+  
+}
+.span
+{
+  font-size: 32px;
+    margin-left: 23px;
+}
+.statusCard:hover
+{
+  background-color: tomato;
+  
+}

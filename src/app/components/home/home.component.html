@@ -52,6 +52,8 @@
   <!--End Of SlideShow-->
   
   
+  <!--List of products-->
+  
   <div class="app">
     <div class="container mb-5 mt-5">
       <h1 class="text-center mt-4 mb-4">Latest Product</h1>
@@ -72,17 +74,21 @@
                     class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
               </div>
             </div>
-            <div class="p-3 bg-danger text-center text-white mt-3 cursor cart"> <a href="#" type="button" style="text-decoration: none; color: aliceblue;"><span class="text-uppercase cart-text">Add
-                to cart</span> </a></div>
+            <div class="p-3 bg-danger text-center text-white mt-3 cursor cart"> 
+              <button (click)="addToCart(temp)" style="text-decoration: none; color: rgb(249, 249, 249);background-color: #fb3531;border: 0px transparent;">
+                <span class="text-uppercase cart-text">Addto cart</span> 
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!--End List of products-->
 
-  <section >
+  <!--<section >
     <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/9aa5e2e1-d3a5-4c73-a4d9-4971677f907f"></iframe>
 
-  </section>
+  </section>-->
 
  <app-footer></app-footer>
