@@ -8,35 +8,35 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 <div class="menu" style="background-color:rgb(218, 245, 232)">
-    <div class="logo">
-      <img src="../assets/images/logo.PNG" alt="logo" height="50px" width="50px">
-    </div>
-   
-  <app-search></app-search>
-  
-    <ul>
-      <li> <a  href="/"> <i class="fa fa-home"></i>Home </a></li>
-      <li><a href="#"><i class="fa fa-clone"></i>Se connecter</a>
-        <div class="sub-menu1">
-          <ul>
-            <li> <a href="#">Connexion</a></li>
-            <li> <a href="#">Créer un compte</a></li>
-          </ul>
-        </div>
-      </li>
-      <li><a href="#"><i class="fa fa-users"></i>Occasion</a></li>
-      <li><a href="#"><i class="fa fa-angellist"></i>Aide</a>
-        <div class="sub-menu1">
-          <ul>
-            <li> <a href="#">FAQ</a></li>
-            <li> <a href="#">Suivi des commandes</a></li>
-          </ul>
-        </div>
-      </li>
-      <!--<li><a href="#"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>Panier</a></li> -->
-      <app-card-status></app-card-status>
-  
-  
-    </ul>
+  <div class="logo">
+    <img src="../assets/images/logo.PNG" alt="logo" height="50px" width="50px">
   </div>
-  <!--End of nav1-->
+
+  <app-search></app-search>
+
+  <ul>
+    <li> <a href="/"> <i class="fa fa-home"></i>Home </a></li>
+    <li><a href="#"><i class="fa fa-clone"></i>Connecter</a>
+      <div class="sub-menu1">
+        <ul>
+          <li><a *ngIf="authService.isloggedIn" (click)="onLogout()" routerLink="/">Logout</a></li>
+          <li> <a *ngIf="!authService.isloggedIn" routerLink="/login">Login</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#"><i class="fa fa-angellist"></i>Aide</a>
+      <div class="sub-menu1">
+        <ul>
+          <li> <a href="#">FAQ</a></li>
+          <li> <a href="#">Suivi des commandes</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#"><i class="fa fa-users"></i>{{authService.loggedUser}}</a></li>
+    <!--<li><a href="#"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>Panier</a></li> -->
+    <app-card-status></app-card-status>
+
+
+  </ul>
+</div>
+<!--End of nav1-->

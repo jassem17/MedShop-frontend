@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CardiologueComponent } from './components/sub-categories/cardiologue/cardiologue.component';
 import { Covid19Component } from './components/sub-categories/covid19/covid19.component';
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path :'category/:id',component: ProductListComponent},
   {path:'product-list/:key' , component: ProductListComponent },
   {path: '', component:HomeComponent },
-  {path: 'hair', component:HairComponent }
+  {path: 'hair', component:HairComponent },
+  {path: 'login', component:LoginComponent}
 ];
 
 @NgModule({

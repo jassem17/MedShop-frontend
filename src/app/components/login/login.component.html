@@ -1,0 +1,38 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<app-navbar1></app-navbar1>
+<app-navbar2></app-navbar2>
+
+<div class="main" >
+    <div class="col-md-6 col-sm-12">
+        
+        <div class="login-form">
+            <div class="alert alert-danger" *ngIf="erreur==1" style="
+            position: absolute;
+            float: left;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(280%,-100%);">
+                <strong>login ou mot de passe erronés..</strong>
+            </div>
+            <form>
+                <div class="form-group">
+                    <h2>USERNAME</h2>
+                    <input type="text" class="form-control" placeholder="User Name" name="username" [(ngModel)]="user.username"  >
+                </div>
+                <br>
+                <br>
+                <div class="form-group">
+                    <h2>PASSWORD</h2>
+                    <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="user.password" >
+                </div>
+                <br>
+                <button type="button" (click)="onLoggedin()" class="btn btn-success my-18 my-sm-0" style="width: 50px; margin: 15px;padding: 5px; text-align: center;">Login</button>
+                <button type="button" class="btn btn-secondary" style="width: 50px;text-align: center;">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
