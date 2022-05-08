@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { PurchaseComponent } from './components/purchase/purchase.component';
 import { CardiologueComponent } from './components/sub-categories/cardiologue/cardiologue.component';
@@ -26,12 +27,14 @@ const routes: Routes = [
   {path:'mobilier',component:MobilierComponent},
   {path:'covid19' , component:Covid19Component},
   {path:'purchase', component :PurchaseComponent},
+  
   { path: 'headache', component: HeadacheComponent },
   { path: 'dafalgan1g', component: Dafalgan1gComponent},
   { path: 'tablemassage', component: TablemassageComponent},
   { path: 'foldablemt', component: FoldablemtComponent},
   {path :'category/:id',component: ProductListComponent},
   {path:'product-list/:key' , component: ProductListComponent },
+  {path: 'product-detail/:id',component:ProductDetailComponent},
   {path: '', component:HomeComponent },
   {path: 'hair', component:HairComponent },
   {path: 'login', component:LoginComponent}

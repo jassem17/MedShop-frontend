@@ -14,8 +14,8 @@
 
         <div class="card mt-3" >
           <div class="product-1 align-items-center p-2 text-center">
-            <div class="image-container" >
-               <img class="xyz rounded" src="{{temp.imageUrl}}" width="200"  >
+            <div  (click)="redirect(temp.id)" class="image-container" >
+               <img  class="xyz rounded" src="{{temp.imageUrl}}" width="200"  >
               <img class="xyz-replacement rounded" src="{{temp.imageShadow}}" width="200" height="auto" >
             </div>
             <h5>{{temp.nom}}</h5>

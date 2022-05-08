@@ -29,6 +29,7 @@ import { CardStatusComponent } from './components/card-status/card-status.compon
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { PurchaseComponent } from './components/purchase/purchase.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 /*const appRoutes: Routes =[
   {path: 'product-list' ,component: ProductListComponent},
@@ -74,6 +75,7 @@ import { PurchaseComponent } from './components/purchase/purchase.component';
     CardStatusComponent,
     LoginComponent,
     PurchaseComponent,
+    ProductDetailComponent,
   
    
   ],

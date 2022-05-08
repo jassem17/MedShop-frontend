@@ -1,7 +1,7 @@
 import { ProductService } from './../../services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/common/product';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { CartOrder } from 'src/app/common/cart-order';
 import { CartServiceService } from 'src/app/services/cart-service.service';
 
@@ -16,7 +16,8 @@ export class ProductListComponent implements OnInit {
   products: Product[]=[];
   constructor(private productService: ProductService,
               private route: ActivatedRoute,
-              private cartService : CartServiceService) { }
+              private cartService : CartServiceService,
+              private router:Router) { }
 
   ngOnInit() {
 
@@ -74,6 +75,10 @@ export class ProductListComponent implements OnInit {
   addToCart(temp:Product){
     const cartorder = new CartOrder(temp);
     this.cartService.addOrderToCart(cartorder);
+  }
+  redirect(id:any)
+  {
+this.router.navigate(['product-detail',id])
   }
 }
 
