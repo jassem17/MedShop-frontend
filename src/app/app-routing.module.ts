@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { PurchaseComponent } from './components/purchase/purchase.component';
 import { CardiologueComponent } from './components/sub-categories/cardiologue/cardiologue.component';
 import { Covid19Component } from './components/sub-categories/covid19/covid19.component';
 import { InstrumentationsComponent } from './components/sub-categories/instrumentations/instrumentations.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'kinesitherapie',component:KinesitherapieComponent},
   {path:'mobilier',component:MobilierComponent},
   {path:'covid19' , component:Covid19Component},
+  {path:'purchase', component :PurchaseComponent},
   { path: 'headache', component: HeadacheComponent },
   { path: 'dafalgan1g', component: Dafalgan1gComponent},
   { path: 'tablemassage', component: TablemassageComponent},

@@ -1,0 +1,22 @@
+<app-navbar1></app-navbar1>
+<app-navbar2></app-navbar2>
+<div class="row">
+    <div *ngFor="let temp of orders" class="col-md-4 myorder buyingorder" width="200">
+        <div class="card ">
+            <div class="totprice">{{temp.prix * temp.quantity | currency:'DT'}}</div>
+            <img src="{{temp.imageUrl}}" alt="{{temp.nom}}" width="380" height="auto" >
+            <h1 style="text-align: center;">{{temp.nom}}</h1>
+            
+            <p class="price" style="text-align: center;"><i (click)="addOrder(temp)" class="fas fa-plus" ></i>
+                <span>{{temp.quantity}}</span>
+                <i (click)="removeOrder(temp)" class="fas fa-minus"></i></p>
+        <button (click)="remove(temp)" class="btn btn-danger mybu">Remove</button>
+        </div>
+
+    </div>
+
+</div>
+<div *ngIf="orders?.length == 0" class="alert alert-danger" role="alert" style="text-align:center;font-size:30px">
+    No Orders Found
+  </div>
+<app-footer></app-footer>

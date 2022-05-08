@@ -28,18 +28,20 @@ export class LoginComponent implements OnInit {
       this.erreur=1;*/
     this.authService.getUserFromDB(this.user.username).subscribe(
       (usr: User) => {
-      if (usr.password == this.user.password)
+      if ( usr.username == this.user.username && usr.password == this.user.password)
      
      {
       this.authService.signIn(usr);
       this.router.navigate(['/']);
     }
+    
     else
     alert('Login ou Mot de passe erronées');
 
     this.erreur = 1;
 
     
-    }, (err) => console.log(err));
+    }
+    , (err) => console.log(err));
 
 }}

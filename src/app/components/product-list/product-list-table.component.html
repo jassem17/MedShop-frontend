@@ -29,6 +29,11 @@
               to cart</span> </button></div>
         </div>
       </div>
+      
     </div>
   </div>
 </div>
+<div *ngIf="products?.length == 0" class="alert alert-danger" role="alert" style="text-align:center;font-size:30px">
+  No Products Found
+</div>
+<app-footer></app-footer>

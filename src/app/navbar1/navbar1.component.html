@@ -15,8 +15,8 @@
   <app-search></app-search>
 
   <ul>
-    <li> <a href="/"> <i class="fa fa-home"></i>Home </a></li>
-    <li><a href="#"><i class="fa fa-clone"></i>Connecter</a>
+    <li> <a routerLink="/"> <i class="fa fa-home"></i>Home </a></li>
+    <li><a routerLink="/login"><i class="fa fa-clone"></i>Connecter</a>
       <div class="sub-menu1">
         <ul>
           <li><a *ngIf="authService.isloggedIn" (click)="onLogout()" routerLink="/">Logout</a></li>
